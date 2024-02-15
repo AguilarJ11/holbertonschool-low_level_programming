@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
- *
- * main - Esto es un comentario
- *
- */
+* main - Esto es un comentario
+* Return: Chau
+*/
 int main(void)
 {
 	char p[];
-	
-	p[] = "Programming is like building a multilingual puzzle"\n;
+
+	p[] = "Programming is like building a multilingual puzzle\n";
 	puts(p);
 
 	return (0);
