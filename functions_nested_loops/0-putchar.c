@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  *main - descripcion
@@ -16,15 +16,4 @@ int main(void)
 	c  = _putchar(cc);
 
 	return (0);
-}
-
-/**
- *_putchar - description
- *@c: description
- *Return: description
- */
-
-int _putchar(char c)
-{
-		return (write(1, &c, 1));
 }
