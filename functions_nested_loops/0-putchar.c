@@ -10,10 +10,10 @@ int _putchar(char c);
 
 int main(void)
 {
-	char c;
-	char cc;
+	char c = 0;
+	char d = 0;
 
-	c = _putchar(cc);
+	c = _putchar(d);
 
 	return (0);
 }
