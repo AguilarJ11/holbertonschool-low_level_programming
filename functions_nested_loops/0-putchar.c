@@ -13,7 +13,7 @@ int main(void)
 	char c;
 	char cc;
 
-	c  = _putchar(cc);
+	c = _putchar(cc);
 
 	return (0);
 }
