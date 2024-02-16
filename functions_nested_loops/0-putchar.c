@@ -3,16 +3,13 @@
 /**
  *main - descripcion
  *Return: descripcion
- *@c: description
+ *@char: description
  */
 
-int _putchar(char);
+int _putchar (char);
 
 int main(void)
 {
-	char c = 0;
-
-	 _putchar(c);
-
+	_putchar('\n');
 	return (0);
 }
