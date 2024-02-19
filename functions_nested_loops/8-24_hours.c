@@ -4,8 +4,7 @@
  */
 void jack_bauer(void)
 {
-	int h;
-	int m;
+	int h,m;
 
 	for (h = 0; h <= 23; h++)
 	{
@@ -18,7 +17,7 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(h);
+				_putchar(h + 48);
 			}
 
 			_putchar(':');
@@ -30,7 +29,7 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(m);
+				_putchar(m + 48);
 			}
 
 			_putchar('\n');
