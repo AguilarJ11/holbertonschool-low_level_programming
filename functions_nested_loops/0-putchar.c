@@ -3,10 +3,7 @@
 /**
  *main - descripcion
  *Return: descripcion
- *@char: description
  */
-
-int _putchar (char);
 
 int main(void)
 {
