@@ -3,7 +3,6 @@
 /**
  *print_last_digit - description
  *@a: description
- *@b: description
  *Return: description
  */
 
