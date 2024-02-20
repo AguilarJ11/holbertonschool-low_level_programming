@@ -1,9 +1,8 @@
-
 #include <stdio.h>
 
 /**
- *main - description
- *Return: description
+ * main - description
+ * Return: description
  */
 
 int main(void)
@@ -19,16 +18,12 @@ int main(void)
 		else if (n % 5 == 0)
 			if (n == 100)
 				printf("Buzz");
-			else 
+			else
 				printf("Buzz ");
 		else
-			printf("%d ", n);
+			printf("%d", n);
 	}
-	
 	printf("\n");
 
 	return (0);
 }
-
-
-
