@@ -1,17 +1,14 @@
 #include "main.h"
 
 /**
- *print_rev - stdout a string in reverse
- *@str: entry string
+ * rev_string - reverse a string
+ * @str: entry string
  */
 
-void print_rev(char *str)
+void rev_string(char *str)
 {
-	int a = 0;
+	int a = 9;
 
-	while (str[a] != '\0')
-		a++;
-	
 	while (a >= 0)
 	{
 		_putchar(str[a]);
@@ -19,3 +16,4 @@ void print_rev(char *str)
 	}
 	_putchar('\n');
 }
+
