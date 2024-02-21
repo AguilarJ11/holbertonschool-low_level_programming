@@ -7,11 +7,20 @@
 
 void rev_string(char *str)
 {
-	int a = 9;
+	int a = 0, b, c;
+	char l;
 
-	while (str[a] >= 0)
+	while (str[a] != '\0')
+		a++;
+
+	c = a;
+
+	for (b = 0; b <= c; b++)
 	{
+		l = str[a];
+		str[b] = l;
 		a--;
 	}
+		
 }
 
