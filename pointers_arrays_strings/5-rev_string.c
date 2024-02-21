@@ -7,12 +7,12 @@
 
 void rev_string(char *str)
 {
-	int a = 9;
+	int a = 0;
 
-	while (a >= 0)
+	while (a <= 9)
 	{
 		_putchar(str[a]);
-		a--;
+		a++;
 	}
 	_putchar('\n');
 }
