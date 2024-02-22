@@ -26,7 +26,5 @@ void rev_string(char *str)
 		str[a] = l;
 		a--;
 	}
-		
+
 }
-
-
