@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *
- *
+ *puts2 - stoud odd numbers only
+ *@str: entry char
  */
 
 void puts2(char *str)
