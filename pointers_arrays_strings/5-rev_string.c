@@ -14,7 +14,10 @@ void rev_string(char *str)
 		a++;
 
 	a--;
-	c = a / 2;
+	if (a / 2 == 0)
+		c = a / 2;
+	else
+		c = a / 2 + 1;
 
 	for (b = 0; a >= c; b++)
 	{
