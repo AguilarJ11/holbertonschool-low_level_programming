@@ -17,10 +17,10 @@ int _strcmp(char *s1, char *s2)
 	for (c = 0; c < cs1; c++)
 	{
 		if (s1[c] > s2[c])
-			return (1);
+			return (13);
 
 		else if (s1[c] < s2[c])
-			return (-1);
+			return (-13);
 
 	}
 	return (0);
