@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
+ *_strncpy - copy a string
+ *@src: string to be copy
+ *@dest: copy of the first string
+ *Return: copy
  */
 
 char *_strncpy(char *dest, char *src, int n)
