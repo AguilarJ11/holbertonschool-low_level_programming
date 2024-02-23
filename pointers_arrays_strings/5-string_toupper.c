@@ -15,7 +15,7 @@ char *string_toupper(char *str)
 	for (c = 0; c <= cstr; c++)
 	{
 		if (str[c] >= 97 && str[c] <= 122)
-			str[c] = str[c -32];
+			str[c] = str[c] - 32;
 	}
 	return (str);
 }
