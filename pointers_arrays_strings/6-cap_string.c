@@ -21,11 +21,17 @@ char *cap_string(char *str)
 			mayus = 1;
 		}
 
-		if ((str[c] >= 65 && str[c] <= 90) || (str[c] >= 48 && str[c] <= 57))
+		if (str[c] >= 65 && str[c] <= 90)
 		       mayus = 1;
+		if (str[c] >= 48 && str[c] <= 57)
+			mayus = 1;
+		if (str[c] == ' ' || str[c] == '	' || str[c] == '\n' ||
+		str[c] == '.' || str[c] == ';' || str[c] == '.' ||
+		str[c] == '!' || str[c] == '?' || str[c] == '"' ||
+		str[c] == '(' || str[c] == ')' || str[c] == '{' ||
+		str[c] == '}')
+			mayus = 1;
 
-		if ((str[c] >= 32 && str[c] <= 47) || (str[c] >= 58 && str[c] <= 64) || str[c] == 123 || str[c] == 125)
-			mayus = 0;
 	}
 	return (str);
 }
