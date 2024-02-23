@@ -18,7 +18,7 @@ void reverse_array(int *a, int n)
 	for (c = 0; c < half; c++)
 	{
 		tmp = a[c];
-		a[c] = a[n - 1 - c);
+		a[c] = a[n - 1 - c];
 		a[n - 1 - c] = tmp
 	}
 }
