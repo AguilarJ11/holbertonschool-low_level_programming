@@ -10,7 +10,7 @@ char *string_toupper(char *str)
 {
 	int cstr, c;
 
-	for (cstr = 0; str[c] != '\0'; cstr++)
+	for (cstr = 0; str[cstr] != '\0'; cstr++)
 		;
 	for (c = 0; c <= csrt; c++)
 	{
