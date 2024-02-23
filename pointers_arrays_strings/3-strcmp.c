@@ -4,25 +4,23 @@
  *_strcmp - compares two strings
  *@s1: entry string 1
  *@s2: entry string 2
- *Return: positive if s1 is bigger, negative if is smalle
+ *Return: description 
  */
 
 int _strcmp(char *s1, char *s2)
 {
-	int cs1, cs2;
+	int cs1, c;
 
 	for (cs1 = 0; s1[cs1] != '\0'; cs1++)
 		;
-	for (cs2 = 0; s2[cs2] != '\0'; cs2++)
-		;
-
-	if ((cs1 > cs2) || (cs2 > cs1))
-		return (13);
-
-	else if ((cs1 < cs2) || (cs2 < cs1))
-		return (-13);
-
-	else
-		return (0);
+	for (c = 0; c < cs1; c++)
+	{
+		if (s1[c] > s2[c])
+			return (1);
+		else if (s1[c] < s2[c])
+			return (-1);
+		else
+			return (0);
+	}
 }
 
