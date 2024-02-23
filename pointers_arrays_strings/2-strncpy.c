@@ -2,8 +2,9 @@
 
 /**
  *_strncpy - copy a string
- *@src: string to be copy
- *@dest: copy of the first string
+ *@src: entry string
+ *@dest: entry string
+ *@n: entry int
  *Return: copy
  */
 
