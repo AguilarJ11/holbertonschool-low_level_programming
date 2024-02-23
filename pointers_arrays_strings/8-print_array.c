@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/*
- *print_array - stout
+/**
+ *print_array - print ielements of an array of integers
  *@a: entry array
  *@n: array lenght
  */
