@@ -30,7 +30,7 @@ char *cap_string(char *str)
 		str[c] == '!' || str[c] == '?' || str[c] == '"' ||
 		str[c] == '(' || str[c] == ')' || str[c] == '{' ||
 		str[c] == '}')
-			mayus = 1;
+			mayus = 0;
 
 	}
 	return (str);
