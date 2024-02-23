@@ -16,10 +16,10 @@ int _strcmp(char *s1, char *s2)
 	for (cs2 = 0; s2[cs2] != '\0'; cs2++)
 		;
 
-	if (cs1 > cs2)
+	if (cs1 > cs2) || (cs2 > cs1)
 		return (cs1);
 
-	else if (cs1 < cs2)
+	else if (cs1 < cs2) || (cs2 < cs1)
 		return (-cs1);
 
 	else
