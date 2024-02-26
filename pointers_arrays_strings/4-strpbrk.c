@@ -4,7 +4,7 @@
  *_strpbrk - search a for a match
  *@s: entry string
  *@accept: entry string
- *return: return string
+ *Return: return string
  */
 
 char *_strpbrk(char *s, char *accept)
