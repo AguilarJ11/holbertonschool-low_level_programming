@@ -2,26 +2,21 @@
 #include <stdio.h>
 
 /**
- *
- *
+ *print_diagsums - print
+ *@a: entry array
+ *@size: entry int
  */
 
 void print_diagsums(int *a, int size)
 {
-	int c1, c2;
+	int c;
 	int dizq = 0, dder = 0;
 
-	for (c1 = 0; c1 < size; c1++)
+	for (c = 0; c < size; c++)
 	{
-		for (c2 = 0; c2 < size; c2++)
-		{
-			if (c1 == c2)
-			{
-				dizq = a[c1][c2] + dizq;
-				dder = a[c1][size - (c2 + 1)] + dder;
-			}
-		}
+		dizq += a[c * size + c];
+		dder += a[(size - 1) * (c + 1)];
 	}
-	printf("&d, %d\n", dizq, dder);
+	printf("%d, %d\n", dizq, dder);
 }
 
