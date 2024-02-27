@@ -27,7 +27,7 @@ int _sqrt_recursion(int n)
 int _raizde(int a, int b)
 {
 	if (b * b == a)
-		return (a);
+		return (b);
 
 	return (_raizde(a, b + 1));
 }
