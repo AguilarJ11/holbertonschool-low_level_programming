@@ -12,14 +12,16 @@ int main(int argc, char *argv[])
 {
 	int c, m = 1;
 
-	if (argc != 3)
+	if (argc != 3) 
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	for(c = 1; c < argc; c++)
+	for (c = 1; c < argc; c++)
 		m *= atoi(argv[c]);
+
+	printf("%d\n", m);
 
 	return (0);
 }
