@@ -3,16 +3,15 @@
 #include <stdlib.h>
 
 /**
- *
- *
+ *main - sum numbers in a string
+ *@argc: n°of arg
+ *@argv: string of strings
+ *return: 1 if error 0 success
  */
 
 int main(int argc, char *argv[])
 {
 	int c1, c2, isdig, sum;
-
-	if (argc == 1)
-		printf("0\n");
 
 	for (c1 = 1; c1 < argc; c1++)
 	{
