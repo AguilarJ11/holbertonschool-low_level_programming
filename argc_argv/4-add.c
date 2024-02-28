@@ -5,8 +5,8 @@
 /**
  *main - sum numbers in a string
  *@argc: n°of arg
- *@argv: string of strings
- *return: 1 if error 0 success
+ *@argv: array of strings
+ *Return: 1 if error 0 success
  */
 
 int main(int argc, char *argv[])
