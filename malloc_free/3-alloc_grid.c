@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ *alloc_grid - create a 2 dimension array fill with 0
+ *@width: entry width
+ *@height: entry height
+ *Return: 2 dim array fill with 0
  */
 
 int **alloc_grid(int width, int height)
@@ -18,7 +19,7 @@ int **alloc_grid(int width, int height)
 	two_dim_array = malloc(height * sizeof(int));
 
 	if (two_dim_array == 0)
-		return(NULL);
+		return (NULL);
 
 	for (c1 = 0; c1 < height; c1++)
 	{
