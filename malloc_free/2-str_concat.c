@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 		if (f <= c1 - 1)
 			p_array[f] = s1[f];
 		if (f <= c2)
-			p_array[f + c1 - 1] = s1[f];
+			p_array[f + c1 - 1] = s2[f];
 	}
 
 	return (p_array);
