@@ -20,8 +20,8 @@ int *array_range(int min, int max)
 	if (p == 0)
 		return (NULL);
 
-	for (c = min; c <= max; c++)
-		p[c] = c;
+	for (c = 0; c + min <= max; c++)
+		p[c] = min + c;
 
 	return (p);
 
