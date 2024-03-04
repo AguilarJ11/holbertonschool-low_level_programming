@@ -2,9 +2,10 @@
 #include <stdlib.h>
 
 /**
- *
- *
- *
+ *string_nconcat - conect s1 with n char of s2
+ *@s1: entry string
+ *@s2: entry string
+ *Return: pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
