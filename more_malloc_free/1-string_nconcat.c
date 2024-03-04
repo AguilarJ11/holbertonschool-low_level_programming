@@ -24,17 +24,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= c2)
 	{
-		p = malloc(sizeof(char) * (c1 + c2) - 1);
+		p = malloc(sizeof(char) * (c1 + c2) + 1);
 	}
 	else
 	{
-		p = malloc(sizeof(char) * c1 + n);
+		p = malloc(sizeof(char) * c1 + n + 1);
 	}
 
 	if (p == NULL)
 		return (NULL);
 
-	for (fill1 = 0; fill1 < c1; fill1++)
+	for (fill1 = 0; fill1 <= c1; fill1++)
 		p[fill1] = s1[fill1];
 
 	for (fill2 = 0; fill2 < c2 && fill2 < n; fill2++)
