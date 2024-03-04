@@ -5,12 +5,13 @@
  *string_nconcat - conect s1 with n char of s2
  *@s1: entry string
  *@s2: entry string
+ *@n: entry unsigned int
  *Return: pointer
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int c1,c2;
+	unsigned int c1, c2;
 	char *p;
 
 	if (s1 == NULL)
