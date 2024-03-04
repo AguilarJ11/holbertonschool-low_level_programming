@@ -10,7 +10,7 @@
 
 int *array_range(int min, int max)
 {
-	int *p, cmin, cmax;
+	int *p, c;
 
 	if (min > max)
 		return (NULL);
@@ -20,10 +20,9 @@ int *array_range(int min, int max)
 	if (p == NULL)
 		return (NULL);
 
-	for (cmin = 0; cmin <= min;cmin++)
-		p[cmin] = cmin;
-	for (cmax = cmin; cmax <= max; cmax++)
-		p[cmax] = cmax;
+	for (c = 0; c <= max; c++)
+		p[c] = c;
 
 	return (p);
+
 }
