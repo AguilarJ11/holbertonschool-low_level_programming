@@ -12,6 +12,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int c, r;
 
+	if ((size <= 0) || (!array))
+		return (-1);
+
 	for (c = 0; c < size; c++)
 	{
 		r = cmp(array[c]);
