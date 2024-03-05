@@ -33,6 +33,8 @@ char *s_copy(char *ds, char *s)
 		ds[c] = s[c];
 	}
 
+	ds[c] = '\0';
+
 	return (ds);
 }
 
@@ -50,14 +52,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *ndog;
 	char *np, *op;
 
-	np = malloc(sizeof(char) * s_largo(name));
+	np = malloc(sizeof(char) * (s_largo(name) + 1));
 
 	if (np == NULL)
 		return (NULL);
 
 	s_copy(np, name);
 
-	op = malloc(sizeof(char) * s_largo(owner));
+	op = malloc(sizeof(char) * (s_largo(owner) + 1));
 
 	if (op == NULL)
 	{
