@@ -9,7 +9,7 @@
 void print_strings(const char *sep, const unsigned int n, ...)
 {
 	unsigned int c = n;
-	char str;
+	char *str;
 
 	va_list l;
 
@@ -17,16 +17,16 @@ void print_strings(const char *sep, const unsigned int n, ...)
 
 	for (c = 0; c < n; c++)
 	{
-		str = va_arg(l, int);
+		str = va_arg(l, char*);
 		if (sep)
 		{
 			if (c == n - 1)
-				printf("%d", str);
+				printf("%s", str);
 			else
-				printf("%d%s", str, sep);
+				printf("%s%s", str, sep);
 		}
 		else
-			printf("%d", str);
+			printf("%s", str);
 	}
 	printf("\n");
 }
