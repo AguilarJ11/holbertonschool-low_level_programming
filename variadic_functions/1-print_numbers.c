@@ -17,9 +17,9 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 
 	for (c = 0; c < n; c++)
 	{
+		num = va_arg(l, int);
 		if (sep)
 		{
-			num = va_arg(l, int);
 			if (c == n - 1)
 				printf("%d", num);
 			else
