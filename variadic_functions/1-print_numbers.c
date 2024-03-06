@@ -17,7 +17,7 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 
 	for (c = 0; c < n; c++)
 	{
-		if (sep != NULL)
+		if (sep)
 		{
 			num = va_arg(l, int);
 			if (c == n - 1)
@@ -25,6 +25,8 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 			else
 				printf("%d%s", num, sep);
 		}
+		else
+			printf("%d", num);
 	}
 	printf("\n");
 }
