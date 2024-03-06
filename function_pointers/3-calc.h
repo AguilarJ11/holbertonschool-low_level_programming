@@ -1,64 +1,25 @@
 #ifndef calc
 #define calc
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
- *suma - suma
- *@a: entry int
- *@b: entry int
- *Return: resultado a + b
+ *struct operator - estructura op mat
+ *@op: operador mat + - / * %
+ *f: puntero a funcion op
  */
 
-int suma(int a, int b)
+typedef struct operator
 {
-	return (a + b);
-}
+	char *op;
+	int (*f)(int, int);
+}op_t;
 
-/**
- *resta - resta
- *@a: entry int
- *@b: entry int
- *Return: resultado a - b
- */
-
-int resta(int a, int b)
-{
-	return (a - b);
-}
-
-/**
- *multi - multiplica
- *@a: entry int
- *@b: entry int
- *Return: resultado a * b
- */
-
-int multi(int a, int b)
-{
-	return (a * b);
-}
-
-/**
- *div - division
- *@a: entry int
- *@b: entry int
- *Return: resultado a / b
- */
-
-int div(int a, int b)
-{
-	return (a / b);
-}
-
-/**
- *resto - resto de div
- *@a: entry int
- *@b: entry int
- *Return: resto de div entre a y b
- */
-
-int resto(int a, int b)
-{
-	return (a % b);
-}
+int op_add(int, int);
+int op_sub(int, int);
+int op_mul(int, int);
+int op_div(int, int);
+int op_mod(int,int);
+int (*get_op_func(char *s))(int, int);
 
 #endif
