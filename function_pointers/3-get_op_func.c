@@ -1,5 +1,5 @@
 #include "3-calc.h"
-
+#include <stdio.h>
 /**
  *get_op_func - busca la funcion del op mat ingresado
  *@s: entry char
@@ -18,7 +18,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (!ops[i].op)
+	while (ops[i].op != NULL)
 	{
 		if (ops[i].op[0] == s[0])
 			return (ops[i].f);
