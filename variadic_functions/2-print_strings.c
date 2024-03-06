@@ -20,7 +20,9 @@ void print_strings(const char *sep, const unsigned int n, ...)
 		str = va_arg(l, char*);
 		if (sep)
 		{
-			if (c == n - 1)
+			if (!str)
+				printf("(nil)");
+			else if (c == n - 1)
 				printf("%s", str);
 			else
 				printf("%s%s", str, sep);
