@@ -2,8 +2,8 @@
 
 /**
  *print_numbers - print numbers
- *@separator: entry char separator
- *@n entry n°of argument
+ *@sep: entry char separator
+ *@n: entry n°of argument
  */
 
 void print_numbers(const char *sep, const unsigned int n, ...)
