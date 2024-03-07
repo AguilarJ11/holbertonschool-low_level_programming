@@ -1,40 +1,48 @@
 #include "variadic_functions.h"
 
 /**
- *
- *
- *
+ *print_all - print all parameters
+ *@format: order of parameters
  */
 
 void print_all(const char * const format, ...)
 {
+	int c1 = 0;
+	char *str;
 	va_list l;
-	char c, *cp;
-	int ent, cont = 0, cont2 = 0;
-	float f;
 
-	var_t variable[] = {
-	{"i", "int"},
-	{"c", "char"},
-	{"f", "float"},
-	{"s", "char*"},
-	{NULL, NULL}
-	};
+	va_start(l, format);
 
-	while (format[cont] != '\0')
+	while (format[c1])
 	{
-		va_start(l, format);
-
-		while (variable[cont2].tipo != NULL)
+		switch (format[c1]) 
 		{
-			if (variable[cont2].tipo == format[cont])
-			{
-
-			}
-
-			cont2++;
+			case 'c':
+				printf("%c", va_arg(l, int));
+				break;
+			case 'i':
+				printf("%i", va_arg(l, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(l, double));
+				break;
+			case 's':
+				str = va_arg(l, char*);
+				if (!str)
+				{
+				printf("(nil)");
+				break;
+				}
+				printf("%s", str);
+				break;
+			default:
+				break;
 		}
-		cont++;
+		if ((format[c1 + 1] != '\0') && (format[c1] == 'c' || format[c1] == 'i' 
+			|| format[c1] == 'f' || format[c1] == 's')) 
+			printf(", ");
+		c1++;
 	}
-
+	putchar('\n');
+	va_end(l);
 }
