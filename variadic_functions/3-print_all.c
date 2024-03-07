@@ -13,6 +13,12 @@ void print_all(const char * const format, ...)
 
 	va_start(l, format);
 
+	while (!format)
+	{
+		putchar('\0');
+		exit(1);
+	}
+
 	while (format[c1])
 	{
 		switch (format[c1])
