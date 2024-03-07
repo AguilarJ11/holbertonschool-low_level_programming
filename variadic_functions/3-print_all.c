@@ -42,7 +42,5 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		c1++;
 	}
-	while (!format)
-		exit(0);
 	putchar('\n');
 }
