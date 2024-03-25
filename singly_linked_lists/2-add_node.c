@@ -1,11 +1,27 @@
 #include "lists.h"
 #include <string.h>
+
 /**
- *add_node - add a new node in a linked list
- *@head: entry pointer of a pointer to the head
- *@str: entry str
- *Return: new node
- */
+*_strlen - count the size of a str
+*@s: entry string
+*Return: n°of char in entry string
+*/
+
+size_t _strlen(const char *s)
+{
+	size_t cont;
+
+	for (cont = 0; s[cont] != '\0'; cont++)
+		;
+	return (cont);
+}
+
+/**
+*add_node - add a new node in a linked list
+*@head: entry pointer of a pointer to the head
+*@str: entry str
+*Return: new node
+*/
 
 list_t *add_node(list_t **head, const char *str)
 {
