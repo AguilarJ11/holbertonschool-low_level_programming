@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  *print_list - print all nodes in a linked list
  *@h: entry pointer to first node
