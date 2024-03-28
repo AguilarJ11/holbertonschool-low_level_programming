@@ -2,7 +2,7 @@
 
 /**
  *free_dlistint - free a node
- *head: entry pointer of a node
+ *@head: entry pointer of a node
  */
 
 void free_dlistint(dlistint_t *head)
@@ -14,5 +14,5 @@ void free_dlistint(dlistint_t *head)
 		dir = head->next;
 		free(head);
 		head = dir;
-	}	
+	}
 }
