@@ -4,7 +4,7 @@
 /**
 *add_dnodeint - add a new node in a double linked list
 *@head: entry pointer of a pointer to the head
-*@str: entry str
+*@n: entry int
 *Return: new node
 */
 
@@ -19,7 +19,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	new->n = n;
 
-	if(!*head)
+	if (!*head)
 	{
 		new->prev = NULL;
 		new->next = NULL;
