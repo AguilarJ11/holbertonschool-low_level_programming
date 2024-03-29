@@ -1,26 +1,29 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- *
- *
- *
+ *insert_dnodeint_at_index - insert a node in a especific position
+ *@h: entry pointer to a head nodei
+ *@idx: entry index position
+ *@n: entry data int
+ *Return: new node
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int cont;
-	dlistint_t *new;
+	dlistint_t *new, *aux;
 
 	if (idx == 0)
 		return (add_dnodeint(h, n));
 
-	for (cont = 0; cont < idx && h; cont++)
+	aux = *h;
+
+	for (cont = 0; cont < idx; cont++)
 	{
-		if (!(*h)->next)
+		if (!aux->next)
 			return (add_dnodeint_end(h, n));
 
-		*h = (*h)->next;
-		
+		aux = aux->next;
 	}
 
 	new = malloc(sizeof(dlistint_t));
@@ -29,12 +32,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 
 	new->n = n;
-	new->next = (*h)->next;
-	new->prev = *h;
-	(*h)->next = new;
-	*h = (*h)->next;
-	(*h)->prev = new;
-	*h = new;
+	new->next = aux;
+	new->prev = aux->prev;
+	aux->prev->next = new;
+	aux->prev = new;
 
 	return (new);
 
