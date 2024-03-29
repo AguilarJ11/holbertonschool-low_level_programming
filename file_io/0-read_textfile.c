@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *read_textfile - read a file and print 
+ *read_textfile - read a file and print
  *@filename: entry filename
  *@letters: entry n°of char in the file
  *Return: n°of char printed
@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		free(rcat);
 		close(fl);
-		return(0);
+		return (0);
 	}
 
 	close(fl);
