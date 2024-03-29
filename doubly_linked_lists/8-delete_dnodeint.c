@@ -36,12 +36,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (cont != index)
 		return (-1);
-	else
+	else if (!aux->next)
 	{
+		aux->prev->next = NULL;
+		free(aux);
+		return (1);
+	}
+
 	aux->prev->next = aux->next;
 	aux->next->prev = aux->prev;
 	free(aux);
-	}
 
 	return (1);
 
