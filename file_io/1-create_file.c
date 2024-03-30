@@ -33,7 +33,7 @@ char *_strdup(char *str)
 	if (!cstr)
 		return (NULL);
 
-	for (cont = 0; cstr[cont] != '\0'; cont++)
+	for (cont = 0; str[cont] != '\0'; cont++)
 		cstr[cont] = str[cont];
 
 	return (cstr);
