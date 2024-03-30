@@ -54,7 +54,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	fl = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	fl = open(filename, O_CREAT | O_WRONLY | O_TRUNC);
 	if (fl == -1)
 		return (-1);
 
